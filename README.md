@@ -1,1 +1,1204 @@
-# Queen.-Ng.com
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen Amascents | Luxury Fragrances & Skincare</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-base: #FAF8F5;
+            --bg-white: #FFFFFF;
+            --accent-gold: #C9A96E;
+            --accent-gold-dark: #A8864B;
+            --text-dark: #222222;
+            --text-muted: #666666;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(201, 169, 110, 0.2);
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 15px 35px rgba(201, 169, 110, 0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Buttons & Badges */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: var(--accent-gold);
+            color: var(--text-dark);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-gold);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1EBE57;
+            transform: translateY(-2px);
+        }
+
+        /* Header / Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(250, 248, 245, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            display: flex;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--glass-border);
+            object-fit: cover;
+            max-height: 550px;
+        }
+
+        /* Section Title Styling */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 80px 0;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: var(--bg-white);
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-gold);
+        }
+
+        .category-card h3 {
+            font-size: 1.4rem;
+            margin-top: 10px;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--bg-base);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .product-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            background: #eae5dc;
+        }
+
+        .product-details {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-gold-dark);
+            margin-bottom: 15px;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            padding: 80px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(5px);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            padding: 30px;
+            border-radius: 15px;
+            background: var(--bg-base);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--glass-border);
+            max-height: 500px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--glass-border);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: var(--text-muted);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Order Modal / Checkout */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: var(--bg-base);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: var(--shadow-hover);
+            border: 1px solid var(--accent-gold);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: var(--text-dark);
+        }
+
+        .modal h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+            background: var(--bg-white);
+            font-family: inherit;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .confirmation-view {
+            text-align: center;
+            display: none;
+        }
+
+        .confirmation-view h4 {
+            font-size: 2rem;
+            color: var(--accent-gold-dark);
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--bg-base);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        footer h3 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            color: var(--bg-base);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #777;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        /* Responsive Mobile First Tweaks */
+        @media (max-width: 768px) {
+            .hero-grid, .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .nav-links {
+                display: none; /* Can be toggled, keep simple & clean for modern look */
+            }
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Queen <span>Amascents</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Luxury Fragrances That Leave A Lasting Impression</h1>
+                <p>Experience premium scents and skincare crafted for elegance, confidence, and unforgettable moments.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Shop Collection</a>
+                    <a href="https://wa.me/2340000000000?text=Hello%20Queen%20Amascents,%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" class="btn btn-whatsapp">Chat on WhatsApp</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.ibb.co/twf3Bx2K/Screenshot-20260803-092617-Instagram-Lite.jpg" alt="Queen Amascents Hero Perfume">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <p>Curated Collections</p>
+                <h2>Our Categories</h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <h3>Oil Perfumes</h3>
+                </div>
+                <div class="category-card">
+                    <h3>Designer Perfumes</h3>
+                </div>
+                <div class="category-card">
+                    <h3>Body Mists</h3>
+                </div>
+                <div class="category-card">
+                    <h3>Diffusers</h3>
+                </div>
+                <div class="category-card">
+                    <h3>Car Scents</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <p>Exquisite Offerings</p>
+                <h2>Our Products</h2>
+            </div>
+            <div class="products-grid">
+
+                <!-- 1. Black soap 250g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/C3vTh1bR/Screenshot-20260803-093729-Whats-App-Business.jpg" class="product-img" alt="Black soap 250g">
+                    <div class="product-details">
+                        <h3>Black Soap 250g</h3>
+                        <div class="product-price">₦7,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Black Soap 250g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 2. Black soap 500g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/WCNM2bK/Screenshot-20260803-092741-Instagram-Lite.jpg" class="product-img" alt="Black soap 500g">
+                    <div class="product-details">
+                        <h3>Black Soap 500g</h3>
+                        <div class="product-price">₦14,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Black Soap 500g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 3. Black Soap 1200g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/fdyYTwJ3/Screenshot-20260803-092644-Instagram-Lite.jpg" class="product-img" alt="Black Soap 1200g">
+                    <div class="product-details">
+                        <h3>Black Soap 1200g</h3>
+                        <div class="product-price">₦27,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Black Soap 1200g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 4. Molato Soap 250g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/7J3NwZ8N/Screenshot-20260803-091125-Instagram-Lite.jpg" class="product-img" alt="Molato Soap 250g">
+                    <div class="product-details">
+                        <h3>Molato Soap 250g</h3>
+                        <div class="product-price">₦9,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Molato Soap 250g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 5. Molato Soap 500g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/C3vTh1bR/Screenshot-20260803-093729-Whats-App-Business.jpg" class="product-img" alt="Molato Soap 500g">
+                    <div class="product-details">
+                        <h3>Molato Soap 500g</h3>
+                        <div class="product-price">₦18,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Molato Soap 500g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 6. Molato Soap 1200g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/WCNM2bK/Screenshot-20260803-092741-Instagram-Lite.jpg" class="product-img" alt="Molato Soap 1200g">
+                    <div class="product-details">
+                        <h3>Molato Soap 1200g</h3>
+                        <div class="product-price">₦35,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Molato Soap 1200g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 7. Goatmilk Gel 250g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/fdyYTwJ3/Screenshot-20260803-092644-Instagram-Lite.jpg" class="product-img" alt="Goatmilk Gel 250g">
+                    <div class="product-details">
+                        <h3>Goatmilk Gel 250g</h3>
+                        <div class="product-price">₦7,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Goatmilk Gel 250g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 8. Goatmilk Gel 500g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/twf3Bx2K/Screenshot-20260803-092617-Instagram-Lite.jpg" class="product-img" alt="Goatmilk Gel 500g">
+                    <div class="product-details">
+                        <h3>Goatmilk Gel 500g</h3>
+                        <div class="product-price">₦13,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Goatmilk Gel 500g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 9. Body cream 250ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/7J3NwZ8N/Screenshot-20260803-091125-Instagram-Lite.jpg" class="product-img" alt="Body cream 250ml">
+                    <div class="product-details">
+                        <h3>Body Cream 250ml</h3>
+                        <div class="product-price">₦9,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Body Cream 250ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 10. Body Cream 500ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/C3vTh1bR/Screenshot-20260803-093729-Whats-App-Business.jpg" class="product-img" alt="Body Cream 500ml">
+                    <div class="product-details">
+                        <h3>Body Cream 500ml</h3>
+                        <div class="product-price">₦19,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Body Cream 500ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 11. Body Cream 1200ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/WCNM2bK/Screenshot-20260803-092741-Instagram-Lite.jpg" class="product-img" alt="Body Cream 1200ml">
+                    <div class="product-details">
+                        <h3>Body Cream 1200ml</h3>
+                        <div class="product-price">₦37,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Body Cream 1200ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 12. Whitening Lotion 250ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/fdyYTwJ3/Screenshot-20260803-092644-Instagram-Lite.jpg" class="product-img" alt="Whitening Lotion 250ml">
+                    <div class="product-details">
+                        <h3>Whitening Lotion 250ml</h3>
+                        <div class="product-price">₦14,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Whitening Lotion 250ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 13. Whitening Lotion 500ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/twf3Bx2K/Screenshot-20260803-092617-Instagram-Lite.jpg" class="product-img" alt="Whitening Lotion 500ml">
+                    <div class="product-details">
+                        <h3>Whitening Lotion 500ml</h3>
+                        <div class="product-price">₦27,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Whitening Lotion 500ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 14. Face cream -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/7J3NwZ8N/Screenshot-20260803-091125-Instagram-Lite.jpg" class="product-img" alt="Face cream">
+                    <div class="product-details">
+                        <h3>Face Cream</h3>
+                        <div class="product-price">₦10,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Face Cream')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 15. Face Toner 100ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/C3vTh1bR/Screenshot-20260803-093729-Whats-App-Business.jpg" class="product-img" alt="Face Toner 100ml">
+                    <div class="product-details">
+                        <h3>Face Toner 100ml</h3>
+                        <div class="product-price">₦7,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Face Toner 100ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 16. Face Toner 250ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/WCNM2bK/Screenshot-20260803-092741-Instagram-Lite.jpg" class="product-img" alt="Face Toner 250ml">
+                    <div class="product-details">
+                        <h3>Face Toner 250ml</h3>
+                        <div class="product-price">₦16,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Face Toner 250ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 17. Face Toner 500ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/fdyYTwJ3/Screenshot-20260803-092644-Instagram-Lite.jpg" class="product-img" alt="Face Toner 500ml">
+                    <div class="product-details">
+                        <h3>Face Toner 500ml</h3>
+                        <div class="product-price">₦29,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Face Toner 500ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 18. Face serum -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/twf3Bx2K/Screenshot-20260803-092617-Instagram-Lite.jpg" class="product-img" alt="Face serum">
+                    <div class="product-details">
+                        <h3>Face Serum</h3>
+                        <div class="product-price">₦10,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Face Serum')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 19. Body scrub 250g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/7J3NwZ8N/Screenshot-20260803-091125-Instagram-Lite.jpg" class="product-img" alt="Body scrub 250g">
+                    <div class="product-details">
+                        <h3>Body Scrub 250g</h3>
+                        <div class="product-price">₦7,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Body Scrub 250g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 20. Body Scrub 500g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/C3vTh1bR/Screenshot-20260803-093729-Whats-App-Business.jpg" class="product-img" alt="Body Scrub 500g">
+                    <div class="product-details">
+                        <h3>Body Scrub 500g</h3>
+                        <div class="product-price">₦14,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Body Scrub 500g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 21. Body Scrub 1200g -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/WCNM2bK/Screenshot-20260803-092741-Instagram-Lite.jpg" class="product-img" alt="Body Scrub 1200g">
+                    <div class="product-details">
+                        <h3>Body Scrub 1200g</h3>
+                        <div class="product-price">₦27,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Body Scrub 1200g')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 22. Glow oil 100ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/fdyYTwJ3/Screenshot-20260803-092644-Instagram-Lite.jpg" class="product-img" alt="Glow oil 100ml">
+                    <div class="product-details">
+                        <h3>Glow Oil 100ml</h3>
+                        <div class="product-price">₦10,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Glow Oil 100ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 23. Glow Oil 250ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/twf3Bx2K/Screenshot-20260803-092617-Instagram-Lite.jpg" class="product-img" alt="Glow Oil 250ml">
+                    <div class="product-details">
+                        <h3>Glow Oil 250ml</h3>
+                        <div class="product-price">₦22,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Glow Oil 250ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 24. Glow Oil 500ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/7J3NwZ8N/Screenshot-20260803-091125-Instagram-Lite.jpg" class="product-img" alt="Glow Oil 500ml">
+                    <div class="product-details">
+                        <h3>Glow Oil 500ml</h3>
+                        <div class="product-price">₦38,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Glow Oil 500ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 25. Half cast oil 100ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/C3vTh1bR/Screenshot-20260803-093729-Whats-App-Business.jpg" class="product-img" alt="Half cast oil 100ml">
+                    <div class="product-details">
+                        <h3>Half Cast Oil 100ml</h3>
+                        <div class="product-price">₦11,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Half Cast Oil 100ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 26. Half Cast 250ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/WCNM2bK/Screenshot-20260803-092741-Instagram-Lite.jpg" class="product-img" alt="Half Cast 250ml">
+                    <div class="product-details">
+                        <h3>Half Cast 250ml</h3>
+                        <div class="product-price">₦25,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Half Cast 250ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 27. Half Cast 500ml -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/fdyYTwJ3/Screenshot-20260803-092644-Instagram-Lite.jpg" class="product-img" alt="Half Cast 500ml">
+                    <div class="product-details">
+                        <h3>Half Cast 500ml</h3>
+                        <div class="product-price">₦46,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Half Cast 500ml')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 28. Knuckle Cleanser -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/twf3Bx2K/Screenshot-20260803-092617-Instagram-Lite.jpg" class="product-img" alt="Knuckle Cleanser">
+                    <div class="product-details">
+                        <h3>Knuckle Cleanser</h3>
+                        <div class="product-price">₦9,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Knuckle Cleanser')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 29. Face Mask -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/7J3NwZ8N/Screenshot-20260803-091125-Instagram-Lite.jpg" class="product-img" alt="Face Mask">
+                    <div class="product-details">
+                        <h3>Face Mask</h3>
+                        <div class="product-price">₦1,500</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Face Mask')">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 30. Pink lips balm -->
+                <div class="product-card">
+                    <img src="https://i.ibb.co/C3vTh1bR/Screenshot-20260803-093729-Whats-App-Business.jpg" class="product-img" alt="Pink lips balm">
+                    <div class="product-details">
+                        <h3>Pink Lips Balm</h3>
+                        <div class="product-price">₦2,000</div>
+                        <button class="btn btn-outline" onclick="openOrderModal('Pink Lips Balm')">Order Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <p>The Standard of Excellence</p>
+                <h2>Why Choose Us</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Premium Quality</h3>
+                    <p>Crafted using the finest raw materials for unmatched luxury.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌛</div>
+                    <h3>Long Lasting Fragrance</h3>
+                    <p>Scents designed to linger gracefully all day long.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Fast Nationwide Delivery</h3>
+                    <p>Swift & secure delivery directly to your doorstep across Nigeria.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>Affordable Luxury</h3>
+                    <p>World-class elegance offered at accessible prices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👑</div>
+                    <h3>Trusted Brand</h3>
+                    <p>Loved by hundreds of satisfied clients across the country.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <p>Client Experiences</p>
+                <h2>Testimonials</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The oil perfumes are absolutely mesmerizing! I get compliments everywhere I go. Definitely my go-to luxury brand now."</p>
+                    <p class="testimonial-author">— Chisom A.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Fast delivery to Abuja and the skincare products have done wonders for my skin tone. Extremely authentic product quality."</p>
+                    <p class="testimonial-author">— Funke O.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Unbelievable longevity. The scents last over 24 hours on clothes. Pure quality without breaking the bank."</p>
+                    <p class="testimonial-author">— Emeka K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <img src="https://i.ibb.co/kgqnpg4s/Screenshot-20260803-093947-Instagram-Lite.jpg" class="about-img" alt="Amarachi Cynthia Ejimofor - CEO Queen Amascents">
+            <div class="about-content">
+                <p style="color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Meet The Founder</p>
+                <h2>Amarachi Cynthia Ejimofor</h2>
+                <p>Welcome to Queen Amascents. Based in the vibrant city of Lagos, Nigeria, our mission is simple: to transform your everyday world through the captivating power of exquisite scents and premium skincare.</p>
+                <p>We believe that luxury should not be distant—it should be an intimate part of your daily ritual. Every bottle, oil, and skincare creation is carefully crafted to leave an unforgettable impression of elegance, beauty, and confidence wherever you go.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <p>Got Questions?</p>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">How does nationwide delivery work? <span>+</span></div>
+                    <div class="faq-answer">We deliver nationwide across Nigeria. Delivery usually takes 1-3 business days within Lagos and 3-5 days to other states.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">What payment methods do you accept? <span>+</span></div>
+                    <div class="faq-answer">We accept direct bank transfers and verified online payment gateways upon order confirmation.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Are your fragrance oils and skincare authentic? <span>+</span></div>
+                    <div class="faq-answer">Yes, 100%. We pride ourselves on offering pure, undiluted oil perfumes and premium, safe skincare formulations.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">What is your return policy? <span>+</span></div>
+                    <div class="faq-answer">Due to the personal nature of cosmetics and fragrances, returns are accepted within 48 hours only if the item received was damaged or incorrect.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Queen Amascents</h3>
+            <p>Change Your World Through Scents.</p>
+            <p>Lagos, Nigeria</p>
+            <div class="social-links">
+                <a href="https://wa.me/2340000000000" target="_blank">WhatsApp</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Queen Amascents. All Rights Reserved. Designed for Luxury.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeOrderModal()">&times;</button>
+            
+            <div id="formView">
+                <h3>Place Your Order</h3>
+                <form id="orderForm" onsubmit="handleOrderSubmit(event)">
+                    <div class="form-group">
+                        <label>Product Name</label>
+                        <input type="text" id="orderProduct" readonly required>
+                    </div>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="orderName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="orderPhone" placeholder="08012345678" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address (Optional)</label>
+                        <input type="email" id="orderEmail" placeholder="yourname@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Delivery Address</label>
+                        <textarea id="orderAddress" rows="2" placeholder="Street address..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" id="orderState" placeholder="e.g. Lagos" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="number" id="orderQuantity" value="1" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Additional Notes</label>
+                        <textarea id="orderNotes" rows="2" placeholder="Any special requests?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Order</button>
+                </form>
+            </div>
+
+            <div class="confirmation-view" id="confirmationView">
+                <h4>Thank You!</h4>
+                <p style="margin-bottom: 25px; color: var(--text-muted);">Thank you for your order. Click below to complete your checkout process directly via WhatsApp.</p>
+                <a id="whatsappBtn" href="#" target="_blank" class="btn btn-whatsapp" style="width: 100%;">Continue to WhatsApp</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript Script -->
+    <script>
+        // Modal logic
+        function openOrderModal(productName) {
+            document.getElementById('orderProduct').value = productName;
+            document.getElementById('formView').style.display = 'block';
+            document.getElementById('confirmationView').style.display = 'none';
+            document.getElementById('orderModal').style.display = 'flex';
+        }
+
+        function closeOrderModal() {
+            document.getElementById('orderModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('orderModal');
+            if (event.target == modal) {
+                closeOrderModal();
+            }
+        }
+
+        // Handle Order Submit & Construct WhatsApp Link
+        function handleOrderSubmit(e) {
+            e.preventDefault();
+
+            const product = document.getElementById('orderProduct').value;
+            const name = document.getElementById('orderName').value;
+            const phone = document.getElementById('orderPhone').value;
+            const address = document.getElementById('orderAddress').value;
+            const state = document.getElementById('orderState').value;
+            const quantity = document.getElementById('orderQuantity').value;
+            const notes = document.getElementById('orderNotes').value;
+
+            // Format message for WhatsApp
+            let textMsg = `Hello Queen Amascents,%0A%0AI would like to place an order:%0A` +
+                          `• *Product:* ${encodeURIComponent(product)}%0A` +
+                          `• *Quantity:* ${encodeURIComponent(quantity)}%0A` +
+                          `• *Customer Name:* ${encodeURIComponent(name)}%0A` +
+                          `• *Phone:* ${encodeURIComponent(phone)}%0A` +
+                          `• *Address:* ${encodeURIComponent(address)}, ${encodeURIComponent(state)}State`;
+
+            if(notes.trim() !== '') {
+                textMsg += `%0A• *Notes:* ${encodeURIComponent(notes)}`;
+            }
+
+            // WhatsApp link (replace phone number with real WhatsApp business number)
+            const waUrl = `https://wa.me/2340000000000?text=${textMsg}`;
+            
+            document.getElementById('whatsappBtn').href = waUrl;
+
+            // Transition UI to Confirmation
+            document.getElementById('formView').style.display = 'none';
+            document.getElementById('confirmationView').style.display = 'block';
+        }
+
+        // Accordion FAQ toggle logic
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+            const icon = element.querySelector('.faq-question span');
+            if (element.classList.contains('active')) {
+                icon.textContent = '-';
+            } else {
+                icon.textContent = '+';
+            }
+        }
+    </script>
+</body>
+</html>
